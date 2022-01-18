@@ -1,12 +1,14 @@
 package flash;
 
 public class Block {
-    private boolean isBad;
+    private int blockNum;
+    private boolean isDiabled;
     private int eraseCount;
     private String data;
 
     public Block() {
-        this.isBad = false;
+        this.blockNum = -1;
+        this.isDiabled = false;
         this.eraseCount = 0;
         this.data = "";
     }
@@ -16,7 +18,15 @@ public class Block {
         this.data = data;
     }
 
-    public int getCount() {
+    public void setBlockNum(int blockNum) {
+        this.blockNum = blockNum;
+    }
+
+    public int getBlockNum() {
+        return blockNum;
+    }
+
+    public int getEraseCount() {
         // System.out.println("[BLOCK] Erase count : " + this.eraseCount);
         return this.eraseCount;
     }
