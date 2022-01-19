@@ -51,6 +51,7 @@ public class Block {
     }
 
     public boolean checkBad() {
+        // Checking the block limit exceed
         return this.eraseCount == FlashStorage.MAX_ERASURE_LIMIT;
     }
 }
