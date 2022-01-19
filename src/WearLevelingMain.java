@@ -4,6 +4,7 @@
  * Department of Computer Engineering, Yeungnam University.
  */
 
+import algorithms.Adaptive;
 import algorithms.HotCold;
 import flash.FlashStorage;
 
@@ -20,7 +21,7 @@ public class WearLevelingMain {
 
         //flashStorage.printSimple();
         //System.out.println();
-        System.out.println("Commands : write, reset, status, hotcold");
+        System.out.println("Commands : write, reset, status, hotcold, adaptive");
         while (true) {
             System.out.print(">>> ");
             input = s.nextLine();
@@ -34,6 +35,9 @@ public class WearLevelingMain {
                     break;
                 case "hotcold":
                     HotCold.hotcoldMain(flashStorage);
+                    break;
+                case "adaptive":
+                    Adaptive.adaptiveMain(flashStorage);
                     break;
                 case "status":
                     flashStorage.printStat();
