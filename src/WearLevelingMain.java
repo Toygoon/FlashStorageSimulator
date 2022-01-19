@@ -8,7 +8,7 @@ import algorithms.HotCold;
 import flash.FlashStorage;
 
 import java.util.Scanner;
-import static flash.WriteRandom.writeRandom;
+import static utils.WriteRandom.writeRandom;
 
 public class WearLevelingMain {
     public static void main(String[] args) throws Exception {

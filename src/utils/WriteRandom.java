@@ -4,7 +4,9 @@
  * Department of Computer Engineering, Yeungnam University.
  */
 
-package flash;
+package utils;
+
+import flash.FlashStorage;
 
 import java.util.Random;
 

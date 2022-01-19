@@ -2,9 +2,7 @@ package algorithms;
 
 import flash.*;
 
-import java.util.Arrays;
-
-import static flash.WriteRandom.writeRandom;
+import static utils.WriteRandom.writeRandom;
 
 public class AdaptiveMain {
     public static int getExtremumCount(FlashStorage flashStorage, boolean isMin) {

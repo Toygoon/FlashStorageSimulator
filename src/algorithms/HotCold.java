@@ -10,6 +10,8 @@ package algorithms;
 import flash.*;
 import java.util.*;
 
+import static utils.SortList.sortList;
+
 public class HotCold {
     private static int threshold = -1;
     private static List<Block> hotData, coldData;
@@ -42,21 +44,6 @@ public class HotCold {
         // Sort into the ascending order for erasing count.
         sortList(hotData);
         sortList(coldData);
-    }
-
-    private static void sortList(List<Block> list) {
-        // Override with new Comparator to sort erase count
-        Collections.sort(list, new Comparator<Block>() {
-            @Override
-            public int compare(Block o1, Block o2) {
-                if (o1.getEraseCount() > o2.getEraseCount())
-                    return 1;
-                else if (o1.getEraseCount() < o2.getEraseCount())
-                    return -1;
-
-                return 0;
-            }
-        });
     }
 
     private static void swapData(FlashStorage flashStorage) throws Exception {
