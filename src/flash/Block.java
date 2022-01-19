@@ -13,11 +13,6 @@ public class Block {
         this.data = "";
     }
 
-    public Block(String data) {
-        eraseCount = 1;
-        this.data = data;
-    }
-
     public void setBlockNum(int blockNum) {
         this.blockNum = blockNum;
     }
