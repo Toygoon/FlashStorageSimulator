@@ -1,7 +1,13 @@
+/* Simulation of Hot Cold Wear Leveling Algorithms
+ * Efficient Management for Large-Scale Flash-Memory Storage Systems with Resource Conservation, 401p
+ *
+ * @author Lim Jung Min,
+ * Department of Computer Engineering, Yeungnam University.
+ */
+
 package algorithms;
 
 import flash.*;
-
 import java.util.*;
 
 public class HotCold {
@@ -75,8 +81,6 @@ public class HotCold {
     }
 
     public static void hotcoldMain(FlashStorage flashStorage) throws Exception {
-        /* Efficient Management for Large-Scale Flash-Memory Storage Systems with Resource Conservation, 401p */
-
         // Set threshold
         setThreshold();
         // Make two virtual groups

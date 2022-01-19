@@ -1,3 +1,9 @@
+/* Simulation of Wear Leveling Algorithms for Flash Storage
+ *
+ * @author Lim Jung Min,
+ * Department of Computer Engineering, Yeungnam University.
+ */
+
 import algorithms.HotCold;
 import flash.FlashStorage;
 

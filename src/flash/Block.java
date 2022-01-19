@@ -1,6 +1,19 @@
+/* Simulation of Block for Flash Storage
+ *
+ * @author Lim Jung Min,
+ * Department of Computer Engineering, Yeungnam University.
+ */
+
 package flash;
 
 public class Block {
+    /* Block simulation class
+    blockNum : current index number of block
+    isDisabled : erase limit exceeded block
+    eraseCount : the count of erasures
+    data : the data block saves
+     */
+
     private int blockNum;
     private boolean isDiabled;
     private int eraseCount;
@@ -22,25 +35,19 @@ public class Block {
     }
 
     public int getEraseCount() {
-        // System.out.println("[BLOCK] Erase count : " + this.eraseCount);
         return this.eraseCount;
     }
 
     public String getData() {
-        // System.out.println("[BLOCK] Data : " + this.data);
         return this.data;
     }
 
     public void setData(String data) throws Exception {
-        if (checkBad()) {
-            // System.out.println("[BLOCK] Erasure limit(" + FlashStorage.MAX_ERASURE_LIMIT + ") exceeded.");
+        if (checkBad())
             throw new Exception("Erasure limit exceeded");
-        }
 
         this.data = data;
         eraseCount++;
-
-        // System.out.println("[BLOCK] Data written (" + this.eraseCount + " times) : " + data);
     }
 
     public boolean checkBad() {
