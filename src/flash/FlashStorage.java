@@ -15,7 +15,7 @@ public class FlashStorage {
 
     // Block count, max erasure count
     public static final int BLOCK_COUNT = 10;
-    public static final int MAX_ERASURE_LIMIT = 100;
+    public static final int MAX_ERASURE_LIMIT = 1000;
 
     // Initiate new flash storage
     public FlashStorage() {
