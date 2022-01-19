@@ -9,20 +9,11 @@ package algorithms;
 
 import flash.*;
 import java.util.*;
+
+import static utils.SortList.getExtremumCount;
 import static utils.SortList.sortList;
 
 public class Adaptive {
-    public static int getExtremumCount(FlashStorage flashStorage, boolean isMin) {
-        // To prevent modification, copy the current blocks into the tmp
-        List<Block> tmp = new ArrayList<>();
-        tmp.addAll(flashStorage.block);
-        sortList(tmp);
-
-        if (isMin)
-            return tmp.get(0).getEraseCount();
-        return tmp.get(tmp.size() - 1).getEraseCount();
-    }
-
     public static double diffState(FlashStorage flashStorage) {
         double diff;
         int max = getExtremumCount(flashStorage, false), min = getExtremumCount(flashStorage, true);
