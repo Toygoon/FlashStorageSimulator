@@ -53,22 +53,27 @@ public class Adaptive {
     }
 
     public static void swapData(FlashStorage flashStorage) throws Exception {
+        // Swap minimum data with maximum data.
         Block max, min;
         int maxIndex, minIndex;
         String tmp;
 
+        // Get extremum count block to swap them
         max = getExtremumCountBlock(flashStorage, false);
         min = getExtremumCountBlock(flashStorage, true);
 
         maxIndex = flashStorage.block.indexOf(max);
         minIndex = flashStorage.block.indexOf(min);
 
+        // Swap operations
         tmp = min.getData();
         flashStorage.block.get(minIndex).setData(flashStorage.block.get(maxIndex).getData());
         flashStorage.block.get(maxIndex).setData(tmp);
 
         System.out.print("(" + maxIndex + ", " + minIndex + ") ");
         System.out.println("diff : " + diff + ", bound : " + bound);
+
+        // Update diff and bounds
         diff = getdiffState(flashStorage);
         bound = getBound(flashStorage);
     }
@@ -88,6 +93,5 @@ public class Adaptive {
 
         System.out.println("diff : " + diff + ", bound : " + bound);
         swapData(flashStorage);
-
     }
 }
