@@ -35,10 +35,12 @@ public class WearLevelingMain {
                 case "reset":
                     flashStorage = new FlashStorage();
                     writeRandom(flashStorage);
+                    break;
                 case "exit":
                     return;
                 default:
                     System.out.println("Invalid Command.");
+                    break;
             }
         }
     }
