@@ -7,6 +7,7 @@
 package utils;
 
 import flash.Block;
+import flash.FlashStorage;
 
 import java.util.*;
 
@@ -24,5 +25,16 @@ public class SortList {
                 return 0;
             }
         });
+    }
+
+    public static int getExtremumCount(FlashStorage flashStorage, boolean isMin) {
+        // To prevent modification, copy the current blocks into the tmp
+        List<Block> tmp = new ArrayList<>();
+        tmp.addAll(flashStorage.block);
+        sortList(tmp);
+
+        if (isMin)
+            return tmp.get(0).getEraseCount();
+        return tmp.get(tmp.size() - 1).getEraseCount();
     }
 }
