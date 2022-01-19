@@ -10,6 +10,10 @@ package algorithms;
 import flash.FlashStorage;
 
 public class Rejuvenator {
+    public static void getMinWear(FlashStorage flashStorage) {
+
+    }
+
     public static void rejuvMain(FlashStorage flashStorage) {
 
     }

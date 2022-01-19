@@ -57,14 +57,19 @@ public class HotCold {
 
         // Swapping each data for minimum count times
         String tmp1, tmp2;
+        System.out.print("Swap operation : ");
         for (int i=0; i<min; i++) {
-            tmp1 = flashStorage.block.get(hotData.get(min - i - 1).getBlockNum()).getData();
-            tmp2 = flashStorage.block.get(coldData.get(i).getBlockNum()).getData();
-            flashStorage.block.get(hotData.get(min - i - 1).getBlockNum()).setData(tmp2);
-            flashStorage.block.get(coldData.get(i).getBlockNum()).setData(tmp1);
+            int hotBlockIndex = hotData.get(min - i - 1).getBlockNum(), coldBlockIndex = coldData.get(i).getBlockNum();
+
+            tmp1 = flashStorage.block.get(hotBlockIndex).getData();
+            tmp2 = flashStorage.block.get(coldBlockIndex).getData();
+            flashStorage.block.get(hotBlockIndex).setData(tmp2);
+            flashStorage.block.get(coldBlockIndex).setData(tmp1);
+
+            System.out.print("(" + hotBlockIndex + ", " + coldBlockIndex + ") ");
         }
 
-        System.out.println("Swapping hot and cold " + min + " data complete.");
+        System.out.println("\nSwapping hot and cold " + min + " data complete.");
     }
 
     public static void hotcoldMain(FlashStorage flashStorage) throws Exception {
