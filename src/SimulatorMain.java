@@ -1,18 +1,16 @@
-/* Simulation of Wear Leveling Algorithms for Flash Storage
+/* Simulation of Wear Leveling and Garbage Collection Algorithms for Flash Storage
  *
  * @author Lim Jung Min,
  * Department of Computer Engineering, Yeungnam University.
  */
 
-import algorithms.Adaptive;
-import algorithms.HotCold;
-import algorithms.Rejuvenator;
+import algorithms.*;
 import flash.FlashStorage;
 
 import java.util.Scanner;
 import static utils.WriteRandom.writeRandom;
 
-public class WearLevelingMain {
+public class SimulatorMain {
     public static void main(String[] args) throws Exception {
         // New flash storage
         FlashStorage flashStorage = new FlashStorage();

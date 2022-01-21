@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WearLeveling.iml" filepath="$PROJECT_DIR$/WearLeveling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FlashStorageSimulator.iml" filepath="$PROJECT_DIR$/FlashStorageSimulator.iml" />
     </modules>
   </component>
 </project>

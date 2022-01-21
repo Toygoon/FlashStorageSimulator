@@ -2,7 +2,7 @@
   <artifact type="jar" name="WearLeveling:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/WearLeveling_jar</output-path>
     <root id="archive" name="WearLeveling.jar">
-      <element id="module-output" name="WearLeveling" />
+      <element id="module-output" name="FlashStorageSimulator" />
     </root>
   </artifact>
 </component>
