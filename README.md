@@ -16,4 +16,4 @@ To test and simulate wear leveling, and garbage collection algorithms.
 
 * It's not precompiled yet, because it's in WIP
 * Also, only two wear leveling is tested and supported.
-* Working algorithms : (Wear leveling) Hot cold, Rejuvenator
+* Working algorithms : (Wear leveling) Hot cold, Adaptive
