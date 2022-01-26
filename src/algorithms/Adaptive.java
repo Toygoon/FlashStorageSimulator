@@ -70,7 +70,7 @@ public class Adaptive {
         flashStorage.block.get(minIndex).setData(flashStorage.block.get(maxIndex).getData());
         flashStorage.block.get(maxIndex).setData(tmp);
 
-        System.out.print("(" + maxIndex + ", " + minIndex + ") ");
+        System.out.println("Swap operation : (" + maxIndex + ", " + minIndex + ") ");
         System.out.println("diff : " + diff + ", bound : " + bound);
 
         // Update diff and bounds
